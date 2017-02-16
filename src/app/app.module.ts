@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TodoListComponentComponent } from './todo-list-component/todo-list-component.component';
 import { TodoListItemComponentComponent } from './todo-list-item-component/todo-list-item-component.component';
 
+import 'rxjs/add/operator/map';
+
 @NgModule({
   declarations: [
     AppComponent,
