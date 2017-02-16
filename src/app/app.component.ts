@@ -24,8 +24,7 @@ export class AppComponent implements OnInit {
     let todo = new Todo(this.description);
     this.todos.push(todo);
     this.description = "";
-    this._todoService.postTodo(todo)
-      .subscribe(result => console.log(result));
+    this._todoService.postTodo(todo);
   }
 
 }
