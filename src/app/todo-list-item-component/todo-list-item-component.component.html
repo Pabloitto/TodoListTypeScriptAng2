@@ -1,0 +1,13 @@
+<li class="list-group-item" [ngClass]="{'done list-group-item-success':todo.isDone,'removed':todo.isRemoved}">
+  <div class="todo-content">
+    <label>
+        <span>{{todo.description}}</span>
+    </label>
+    <button (click)="onTrash()" class="todo-btn btn btn-danger btn-sm pull-right">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+    <button (click)="onDone()" class="todo-btn btn btn-success btn-sm pull-right">
+      <span class="glyphicon glyphicon-ok"></span>
+    </button>
+  </div>
+</li>

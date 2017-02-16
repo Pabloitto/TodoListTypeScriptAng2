@@ -1,0 +1,5 @@
+<div class="todolist">
+  <ul class="list-group">
+    <app-todo-list-item-component *ngFor="let todo of todos" [todo]="todo" (trashEvent)="onTrash($event)"></app-todo-list-item-component>
+  </ul>
+</div>

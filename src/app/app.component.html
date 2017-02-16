@@ -1,3 +1,27 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <img src="../assets/header1.png" alt="">
+  </div>
+  <div class="row todo-content">
+    <div class="col-md-6 col-md-offset-3">
+      <form class="form-inline todo-form" (submit)="addTodo()">
+        <div class="form-group">
+          <label for="exampleInputName2">Todo</label>
+          <input 
+            [(ngModel)]="description"
+            required 
+            type="text" 
+            class="form-control add-todo"
+            name="todo-name"
+            placeholder="Add todo">
+        </div>
+        <button type="submit" class="btn btn-info">Add</button>
+      </form>
+      <hr>
+      <app-todo-list-component [todos]="todos"></app-todo-list-component>
+    </div>
+  </div>
+  <div class="row">
+    <img src="../assets/footer.png" alt="">
+  </div>
+</div>
