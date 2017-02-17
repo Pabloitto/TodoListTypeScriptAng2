@@ -11,7 +11,9 @@ export class TodoService {
     postTodo(todo: Todo) {
         let url = "http://localhost:4800/api/todos";
         return this._http.post(url, todo)
-            .map((res: Response) => <boolean>res.json());
+            .map((res: Response) => {
+                return <boolean>res.json();
+            });
     }
 
     updateTodo(todo: Todo) {
